@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "dev": "next",
-    "build": "prisma generate && next build",
+    "build": "next build",
+    "build-with-db": "prisma generate && next build",
     "start": "next start"
   },
   "keywords": [],
