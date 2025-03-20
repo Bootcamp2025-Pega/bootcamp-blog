@@ -24,8 +24,7 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: Run tests with coverage
-      run: npx jest
+
     - name: Set up Node.js ${{ env.NODE_VERSION }}
       uses: actions/setup-node@v3
       with:
@@ -39,3 +38,6 @@ jobs:
     - name: Build
       run: |
         DISABLE_DB_CONNECTION=true npm run build
+
+    - name: Run tests with coverage
+      run: npx jest
