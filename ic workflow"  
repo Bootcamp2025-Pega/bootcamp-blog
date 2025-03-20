@@ -1,0 +1,26 @@
+[33mcommit 0270fb9bd4b17d97b1179ce66494650a278ecfd4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32madd-workflow[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: mksmlnbrn <maksymilianbaran@gmail.com>
+Date:   Thu Mar 20 12:02:13 2025 +0100
+
+    Update docker-compose.yml
+    
+    add NODE_ENV: development
+
+[1mdiff --git a/docker-compose.yml b/docker-compose.yml[m
+[1mindex 6d7683b..7335d3f 100644[m
+[1m--- a/docker-compose.yml[m
+[1m+++ b/docker-compose.yml[m
+[36m@@ -6,10 +6,11 @@[m [mservices:[m
+       POSTGRES_DB: bootcam_blog_db[m
+       POSTGRES_USER: bootcam_user[m
+       POSTGRES_PASSWORD: password123[m
+[32m+[m[32m      NODE_ENV: development[m
+     ports:[m
+       - "5432:5432"[m
+     volumes:[m
+       - db-data:/var/lib/postgresql/data[m
+ [m
+ volumes:[m
+[31m-  db-data:[m
+\ No newline at end of file[m
+[32m+[m[32m  db-data:[m
