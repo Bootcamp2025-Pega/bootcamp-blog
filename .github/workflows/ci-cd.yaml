@@ -38,3 +38,6 @@ jobs:
     - name: Build
       run: |
         DISABLE_DB_CONNECTION=true npm run build
+
+    - name: Run tests with coverage
+      run: npx jest
