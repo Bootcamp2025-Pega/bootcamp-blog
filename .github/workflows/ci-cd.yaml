@@ -40,4 +40,9 @@ jobs:
         DISABLE_DB_CONNECTION=true npm run build
 
     - name: Run tests with coverage
-        run: npx jest
+      run: npx jest
+
+    - name: Sonar Scan
+      uses: SonarSource/sonarqube-scan-action@v5.0.0
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
